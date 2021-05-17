@@ -2,7 +2,8 @@ import React, { ReactElement } from "react";
 import { Link } from "@reach/router";
 
 import { makeStyles } from "@material-ui/core/styles";
-import { ListItemIcon } from "@material-ui/core";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
 
 const useStyles = makeStyles({
   appBarLinkWrapper: {
@@ -43,20 +44,22 @@ const AppBarLink: React.FC<Props> = ({ children, title, path }) => {
 
   return (
     <div className={classes.appBarLinkWrapper}>
-      <div className={classes.appBarLinkIcon}>
-        <ListItemIcon
-          className={
-            classes.appBarLinkIconCore + " " + classes.appBarLinkEffect
-          }
-        >
-          {children}
-        </ListItemIcon>
-      </div>
-      <div className={classes.appBarLinkText}>
-        <Link to={path} className={classes.appBarLinkEffect}>
-          {title}
-        </Link>
-      </div>
+      <Link to={path}>
+        <div className={classes.appBarLinkIcon}>
+          <ListItemIcon
+            className={
+              classes.appBarLinkIconCore + " " + classes.appBarLinkEffect
+            }
+          >
+            {children}
+          </ListItemIcon>
+        </div>
+        <div className={classes.appBarLinkText}>
+          <ListItemText disableTypography className={classes.appBarLinkEffect}>
+            {title}
+          </ListItemText>
+        </div>
+      </Link>
     </div>
   );
 };
