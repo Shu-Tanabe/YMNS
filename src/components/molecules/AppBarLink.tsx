@@ -15,6 +15,9 @@ const useStyles = makeStyles({
       },
     },
   },
+  appBarLink: {
+    textDecoration: "none",
+  },
   appBarLinkIcon: {
     display: "flex",
     flexFlow: "column",
@@ -44,7 +47,7 @@ const AppBarLink: React.FC<Props> = ({ children, title, path }) => {
 
   return (
     <div className={classes.appBarLinkWrapper}>
-      <Link to={path}>
+      <Link to={path} className={classes.appBarLink}>
         <div className={classes.appBarLinkIcon}>
           <ListItemIcon
             className={
