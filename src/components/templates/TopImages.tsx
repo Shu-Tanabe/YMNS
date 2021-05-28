@@ -13,7 +13,7 @@ const useStyles = makeStyles(() => ({
     zIndex: 1,
     objectFit: "cover",
     height: "100vh",
-    width: "60vw",
+    width: "55vw",
   },
   topImgRight: {
     position: "absolute",
@@ -22,7 +22,20 @@ const useStyles = makeStyles(() => ({
     zIndex: 2,
     objectFit: "cover",
     height: "100vh",
-    width: "60vw",
+    width: "55vw",
+    clipPath: "polygon(18% 0%, 100% 0%, 100% 100%, 0% 100%)",
+  },
+  topTitleBox: {
+    position: "absolute",
+    marginTop: "-145px",
+    marginLeft: "-237px",
+    top: "50%",
+    left: "50%",
+    zIndex: 3,
+    height: "290px",
+    width: "474px",
+    borderStyle: "none",
+    boxShadow: "0 0 2px rgba(0, 10, 25, 0, .5)",
   },
 }));
 
@@ -32,13 +45,16 @@ const TopImages: React.FC = () => {
   return (
     <article className={classes.topImgArea}>
       <img
-        src="/img/zhipeng-ya-Eaa2QUqnz3M-unsplash.jpg"
+        src="/img/ben-kolde-cpLsWmMEa1Q-unsplash.jpg"
         className={classes.topImgLeft}
       />
       <img
-        src="/img/martijn-baudoin-c_uHShdMI4Q-unsplash.jpg"
+        src="/img/joao-melo-ExBeumLi7G4-unsplash.jpg"
         className={classes.topImgRight}
       />
+      <h1>
+        <img src="/img/YMNSlogo.png" className={classes.topTitleBox} />
+      </h1>
     </article>
   );
 };
