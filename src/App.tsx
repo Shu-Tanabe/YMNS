@@ -1,17 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
+
 import { Root, Routes, addPrefetchExcludes } from "react-static";
-import { Link, Router } from "@reach/router";
+import { Router } from "@reach/router";
 import ApplicationBar from "components/ApplicationBar";
 import TopImages from "components/templates/TopImages";
 import TopImagesSm from "components/templates/TopImagesSm";
+import BottomNav from "components/BottomNav";
 import Dynamic from "containers/Dynamic";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-
-import BottomNavigation from "@material-ui/core/BottomNavigation";
-import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-import HomeIcon from "@material-ui/icons/Home";
-import DescriptionIcon from "@material-ui/icons/Description";
 
 const useStyles = makeStyles({
   content: {
@@ -46,7 +43,6 @@ function App() {
   const classes = useStyles();
   const theme = useTheme();
   const isPhoneSize = useMediaQuery(theme.breakpoints.up("sm"));
-  const [value, setValue] = useState(0);
 
   return (
     <Root>
@@ -83,27 +79,7 @@ function App() {
               </React.Suspense>
             </div>
           </div>
-          <BottomNavigation
-            value={value}
-            onChange={(_event, newValue) => {
-              setValue(newValue);
-            }}
-            showLabels
-            className={classes.bottomNavigation}
-          >
-            <BottomNavigationAction
-              label="Home"
-              icon={<HomeIcon />}
-              component={Link}
-              to="/"
-            />
-            <BottomNavigationAction
-              label="Blog"
-              icon={<DescriptionIcon />}
-              component={Link}
-              to="/blog"
-            />
-          </BottomNavigation>
+          <BottomNav />
         </div>
       )}
     </Root>
