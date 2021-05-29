@@ -1,0 +1,19 @@
+version: 0.2
+
+phase:
+  install:
+    runtime-versions:
+      nodejs: 12
+
+  pre_build:
+    commands:
+      - npm install
+
+  build:
+    commands:
+      - yarn build
+
+  post_build:
+    commands:
+      - echo Distributing to S3...
+      - aws s3 sync --exact-timestamps --delete build s3://ymns.com
