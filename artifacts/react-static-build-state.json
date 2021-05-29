@@ -1,0 +1,79 @@
+{
+  "prefetchRate": 5,
+  "maxThreads": null,
+  "disableRoutePrefixing": false,
+  "outputFileRate": 100,
+  "extensions": [
+    ".js",
+    ".jsx",
+    ".ts",
+    ".tsx",
+    ".md",
+    ".mdx"
+  ],
+  "minLoadTime": 200,
+  "disablePreload": false,
+  "disableRuntime": false,
+  "preloadPollInterval": 300,
+  "productionSourceMaps": false,
+  "silent": false,
+  "entry": "/Users/tanashoe/Desktop/react/static/YMNS/src/index.tsx",
+  "plugins": [
+    "react-static-plugin-typescript",
+    [
+      "/Users/tanashoe/Desktop/react/static/YMNS/node_modules/react-static-plugin-source-filesystem/node.api.js",
+      {
+        "location": "/Users/tanashoe/Desktop/react/static/YMNS/src/pages"
+      }
+    ],
+    "/Users/tanashoe/Desktop/react/static/YMNS/node_modules/react-static-plugin-reach-router/browser.api.js",
+    "/Users/tanashoe/Desktop/react/static/YMNS/node_modules/react-static-plugin-sitemap/dist/node.api.js",
+    [
+      "react-static-plugin-mdx",
+      {
+        "includePaths": [
+          "/Users/tanashoe/Desktop/react/static/YMNS/src/pages/blogs"
+        ],
+        "extensions": [
+          ".md",
+          ".mdx"
+        ]
+      }
+    ],
+    "/Users/tanashoe/Desktop/react/static/YMNS"
+  ],
+  "paths": {
+    "ROOT": "/Users/tanashoe/Desktop/react/static/YMNS",
+    "SRC": "/Users/tanashoe/Desktop/react/static/YMNS/src",
+    "DIST": "/Users/tanashoe/Desktop/react/static/YMNS/dist",
+    "ASSETS": "/Users/tanashoe/Desktop/react/static/YMNS/dist",
+    "PLUGINS": "/Users/tanashoe/Desktop/react/static/YMNS/plugins",
+    "TEMP": "/Users/tanashoe/Desktop/react/static/YMNS/tmp",
+    "ARTIFACTS": "/Users/tanashoe/Desktop/react/static/YMNS/artifacts",
+    "PUBLIC": "/Users/tanashoe/Desktop/react/static/YMNS/public",
+    "NODE_MODULES": "/Users/tanashoe/Desktop/react/static/YMNS/node_modules",
+    "EXCLUDE_MODULES": "/Users/tanashoe/Desktop/react/static/YMNS/node_modules",
+    "PACKAGE": "/Users/tanashoe/Desktop/react/static/YMNS/package.json",
+    "HTML_TEMPLATE": "/Users/tanashoe/Desktop/react/static/YMNS/dist/index.html",
+    "STATIC_DATA": "/Users/tanashoe/Desktop/react/static/YMNS/dist/staticData"
+  },
+  "siteRoot": "/",
+  "basePath": "",
+  "publicPath": "/",
+  "assetsPath": "",
+  "extractCssChunks": false,
+  "inlineCss": false,
+  "babelExcludes": [],
+  "devServer": {
+    "host": "localhost",
+    "port": 3000
+  },
+  "terser": {
+    "terserOptions": {
+      "mangle": {},
+      "parse": {},
+      "compress": {},
+      "output": {}
+    }
+  }
+}
