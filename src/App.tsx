@@ -9,6 +9,7 @@ import BottomNav from "components/BottomNav";
 import Dynamic from "containers/Dynamic";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { Helmet } from "react-helmet";
 
 const useStyles = makeStyles({
   content: {
@@ -46,6 +47,13 @@ function App() {
 
   return (
     <Root>
+      <div className="application">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>YMNS Technology Web Site</title>
+          <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
+      </div>
       {isPhoneSize && (
         <div>
           <ApplicationBar></ApplicationBar>
