@@ -16,3 +16,7 @@ phase:
   post_build:
     commands:
       - echo Distributing to S3...
+
+  artifacts:
+    files:
+      - "dist/*""
