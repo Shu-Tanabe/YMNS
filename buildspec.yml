@@ -16,4 +16,3 @@ phase:
   post_build:
     commands:
       - echo Distributing to S3...
-      - aws s3 sync dist --delete s3://ymns.com
