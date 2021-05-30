@@ -19,4 +19,4 @@ phase:
 
   artifacts:
     files:
-      - "dist/*""
+      - "dist/*"
