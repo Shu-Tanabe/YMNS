@@ -17,6 +17,6 @@ phases:
     commands:
       - echo Distributing to S3...
 
-  artifacts:
-    files:
-      - "dist/*"
+artifacts:
+  files:
+    - "dist/*"
