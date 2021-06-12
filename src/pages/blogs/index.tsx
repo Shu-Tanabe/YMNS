@@ -1,3 +1,3 @@
 import React from "react";
 
-export default () => <div>test page</div>;
+export default () => <div>一覧画面ができなかった</div>;

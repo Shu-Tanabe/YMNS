@@ -9,7 +9,7 @@ import App from "./App";
 // Export your top level component as JSX (for static rendering)
 export default App;
 
-const theme = createMuiTheme({
+const muiTheme = createMuiTheme({
   palette: {
     primary: {
       main: "#26A69A",
@@ -27,7 +27,7 @@ if (typeof document !== "undefined") {
 
   const render = (Comp: Function) => {
     renderMethod(
-      <MuiThemeProvider theme={theme}>
+      <MuiThemeProvider theme={muiTheme}>
         <AppContainer>
           <Comp />
         </AppContainer>
