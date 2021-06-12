@@ -24,7 +24,7 @@ const instagramIcon = <FontAwesomeIcon icon={["fab", "instagram"]} size="lg" />;
 
 const useStyles = makeStyles({
   appBarRoot: {
-    height: "10%",
+    height: "10vh",
     alignItems: "center",
     backgroundColor: "#FFFFFF",
     color: "#424242",

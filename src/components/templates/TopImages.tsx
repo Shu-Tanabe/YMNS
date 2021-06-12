@@ -43,7 +43,7 @@ const TopImages: React.FC = () => {
   const classes = useStyles();
 
   return (
-    <article className={classes.topImgArea}>
+    <div className={classes.topImgArea}>
       <img
         src="/img/ben-kolde-cpLsWmMEa1Q-unsplash.jpg"
         className={classes.topImgLeft}
@@ -55,7 +55,7 @@ const TopImages: React.FC = () => {
       <h1>
         <img src="/img/YMNSlogo.png" className={classes.topTitleBox} />
       </h1>
-    </article>
+    </div>
   );
 };
 export default TopImages;
