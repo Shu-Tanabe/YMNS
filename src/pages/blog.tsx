@@ -53,7 +53,7 @@ export default () => {
           <li>Lambda@Edgeを利用すればサーバレスで公開も可能</li>
         </ul>
       </div>
-      <BottomNav />
+      {!isPCSize && <BottomNav />}
     </div>
   );
 };
